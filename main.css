@@ -1,0 +1,13 @@
+div#map {
+  width: 100%;
+  height: 100vh;
+}
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #3A3F40;
+}
+.movileText {
+  color: #3A3F40;
+}

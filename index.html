@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/css/materialize.min.css">
+  <link rel="stylesheet" href="main.css">
+  <title>EASY-VRECO</title>
+</head>
+<body>
+
+  <header>
+    <nav>
+      <div class="nav-wrapper  blue lighten-4">
+        <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
+        <!-- trazar ruta desktop -->
+        <ul class="right hide-on-med-and-down">
+          <li>
+            <div class="input-field">
+              <i class="material-icons prefix">add_location</i>
+              <input id="punto-partida" type="text" class="validate">
+              <label for="punto-partida">Punto partida</label>
+            </div>
+          </li>
+          <li>
+            <div class="input-field">
+              <i class="material-icons prefix">add_location</i>
+              <input id="punto-destino" type="text" class="validate">
+              <label for="punto-destino">Punto destino</label>
+            </div>
+          </li>
+          <li>
+            <a class="waves-effect waves-light btn pink lighten-4" id="trazar-ruta">Trazar Ruta</a>
+          </li>
+        </ul>
+        <!-- trazar ruta movile -->
+        <ul class="side-nav movileText" id="mobile-demo">
+          <li>
+            <div class="input-field col s4">
+              <i class="material-icons prefix">add_location</i>
+              <input id="punto-partida2" type="text" class="validate">
+              <label for="punto-partida2">Punto partida</label>
+            </div>
+          </li>
+          <li>
+            <div class="input-field col s4">
+              <i class="material-icons prefix">add_location</i>
+              <input id="punto-destino2" type="text" class="validate">
+              <label for="punto-destino2">Punto destino</label>
+            </div>
+          </li>
+          <li>
+            <a class="waves-effect waves-light btn pink lighten-4" id="trazar-ruta2">Trazar Ruta</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+
+  <!-- trace route -->
+   
+  <!-- 
+    <div class="row">
+      <div class="col-sm-12 col-md-3">
+          <input type="text" class="form-control" id="punto-partida" placeholder="Elige punto de partida..." aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      <div class="col-sm-12 col-md-3">
+          <input type="text" class="form-control" id="punto-destino" placeholder="Elige un destino..." aria-label="Username" aria-describedby="basic-addon1">
+      </div>
+      <div class="col-sm-12 col-md-2">
+        <button type="button" class="btn btn-outline-info" id="trazar-ruta">Trazar Ruta</button>
+      </div>
+    </div>
+  --> 
+
+  <!-- end trace route -->
+
+  <!-- section map -->
+  <section>
+    <div class="row">
+      <div class="col s12">
+        <div id="map"></div>
+      </div>
+    </div>
+  </section>
+  <!-- end section map -->
+  <script
+  src="http://code.jquery.com/jquery-3.3.1.min.js"
+  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+  crossorigin="anonymous">
+  </script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.100.2/js/materialize.min.js"></script>
+  <script src="https://www.gstatic.com/firebasejs/4.9.1/firebase.js"></script>
+  <script async defer
+  src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBdOcayA7IMMOIvVcGFJrL7VlPEASlMtKY&libraries=places&callback=initMap">
+  </script>
+  <script src="app.js"></script>
+</body>
+</html>
