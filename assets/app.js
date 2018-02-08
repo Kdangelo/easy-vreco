@@ -2,17 +2,6 @@ $( document ).ready(function(){
   $(".button-collapse").sideNav();
 });
 
-// Initialize Firebase
-var config = {
-  apiKey: "AIzaSyAlpaezibmVsHwV3d2Vf3c68pJkOMdtX-I",
-  authDomain: "easy-vreco-fd710.firebaseapp.com",
-  databaseURL: "https://easy-vreco-fd710.firebaseio.com",
-  projectId: "easy-vreco-fd710",
-  storageBucket: "",
-  messagingSenderId: "45104016066"
-};
-firebase.initializeApp(config);
-
 // Google maps
 function initMap() {
   var map = new google.maps.Map(document.getElementById('map'), {
@@ -74,4 +63,5 @@ directionsDisplay.setMap(map);
  };
  document.getElementById('trazar-ruta').addEventListener('click', trazarRuta);
  document.getElementById('trazar-ruta2').addEventListener('click', trazarRuta);
+ 
 } 
