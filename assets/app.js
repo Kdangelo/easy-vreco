@@ -51,7 +51,22 @@ function initMap() {
      travelMode: 'DRIVING'
    }, function(response, status) {
      if (status === 'OK') {
-       directionsDisplay.setDirections(response);
+        directionsDisplay.setDirections(response);
+        var star = response.routes[0].legs[0].start_location;
+        var end = response.routes[0].legs[0].end_location;
+        // console.log(JSON.stringify(star, null, ''));         
+        function addMarker(pos) {
+          var image = './assets/cycling-road.png';
+          new google.maps.Marker({
+            position: pos,
+            animation: google.maps.Animation.DROP,
+            map: map,
+            icon: image,
+            title: 'hola lab!'
+          });
+        }
+        addMarker(star);
+        addMarker(end);
      } else {
        window.alert('No encontramos una ruta.');
        }
